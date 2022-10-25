@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90F80496-246F-4B22-959D-262EF1A62CF9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Win32</RootNamespace>
+    <AssemblyName>Win32</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WIN32</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpDX">
+      <HintPath>..\..\..\Users\bogda\Downloads\SharpDX\Bin\DirectX11-net20\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9">
+      <HintPath>..\..\..\Users\bogda\Downloads\SharpDX\Bin\DirectX11-net20\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectInput">
+      <HintPath>..\..\..\Users\bogda\Downloads\SharpDX\Bin\DirectX11-net20\SharpDX.DirectInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectSound">
+      <HintPath>..\..\..\Users\bogda\Downloads\SharpDX\Bin\DirectX11-net20\SharpDX.DirectSound.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\WMGame3D\Asteroid.cs">
+      <Link>Source\Asteroid.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Enemy.cs">
+      <Link>Source\Enemy.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Engine\Engine.cs">
+      <Link>Source\Engine\Engine.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Engine\Font.cs">
+      <Link>Source\Engine\Font.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Engine\Formats\MD2.cs">
+      <Link>Source\Engine\Formats\MD2.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Engine\Formats\Normals.cs">
+      <Link>Source\Engine\Formats\Normals.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Engine\Input.cs">
+      <Link>Source\Engine\Input.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Engine\Math.cs">
+      <Link>Source\Engine\Math.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Engine\WM.cs">
+      <Link>Source\Engine\WM.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Game.cs">
+      <Link>Source\Game.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\HUD.cs">
+      <Link>Source\HUD.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Pickup.cs">
+      <Link>Source\Pickup.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Player.cs">
+      <Link>Source\Player.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Program.cs">
+      <Link>Source\Program.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\Projectile.cs">
+      <Link>Source\Projectile.cs</Link>
+    </Compile>
+    <Compile Include="..\WMGame3D\World.cs">
+      <Link>Source\World.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Engine\Graphics.D3D9.cs" />
+    <Compile Include="Source\Engine\Sound.Win32.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

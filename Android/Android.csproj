@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{143FC85F-46CB-46F3-A1A4-DE8C68A96F34}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{122416d6-6b49-4ee2-a1e8-b825f31c79fe}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Android</RootNamespace>
+    <AssemblyName>Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyStore>C:\Users\bogda\Documents\mygame.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>12341234</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>mygame</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>12341234</AndroidSigningKeyPass>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
+    <AndroidSupportedAbis>armeabi;x86</AndroidSupportedAbis>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK-1.0" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Source\Asteroid.cs">
+      <Link>Asteroid.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Background.cs">
+      <Link>Background.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Enemy.cs">
+      <Link>Enemy.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Engine.cs">
+      <Link>Engine\Engine.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Font.Android.cs">
+      <Link>Engine\Font.Android.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Formats\MD2.cs">
+      <Link>Engine\MD2.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Formats\Normals.cs">
+      <Link>Engine\Normals.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Graphics.GLES.cs">
+      <Link>Engine\Graphics.GLES.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Input.cs">
+      <Link>Engine\Input.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Math.cs">
+      <Link>Engine\Math.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\SmoothAnimator.cs">
+      <Link>Engine\SmoothAnimator.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Sound.Android.cs">
+      <Link>Engine\Sound.Android.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\UI.cs">
+      <Link>Engine\UI.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Game.cs">
+      <Link>Game.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\HUD.cs">
+      <Link>HUD.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Menu.cs">
+      <Link>Menu.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Pickup.cs">
+      <Link>Pickup.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Player.cs">
+      <Link>Player.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Projectile.cs">
+      <Link>Projectile.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Save.cs">
+      <Link>Save.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\World.cs">
+      <Link>World.cs</Link>
+    </Compile>
+    <Compile Include="Android\MainActivity.cs" />
+    <Compile Include="Engine\Android.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidNativeLibrary Include="lib\armeabi-v7a\libopenal32.so" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+  -->
+</Project>

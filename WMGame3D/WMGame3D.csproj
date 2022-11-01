@@ -54,28 +54,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Asteroid.cs" />
-    <Compile Include="Enemy.cs" />
-    <Compile Include="Engine\Engine.cs" />
-    <Compile Include="Engine\Font.cs" />
-    <Compile Include="Engine\Formats\MD2.cs" />
-    <Compile Include="Engine\Formats\Normals.cs" />
-    <Compile Include="Engine\Graphics.cs" />
-    <Compile Include="Engine\Input.cs" />
-    <Compile Include="Engine\Math.cs" />
-    <Compile Include="Engine\Sound.WM.cs" />
-    <Compile Include="Engine\WM.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="HUD.cs" />
-    <Compile Include="Pickup.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Projectile.cs" />
+    <Compile Include="..\Source\Asteroid.cs">
+      <Link>Asteroid.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Background.cs">
+      <Link>Background.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Enemy.cs">
+      <Link>Enemy.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Engine.cs">
+      <Link>Engine\Engine.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Font.cs">
+      <Link>Engine\Font.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Formats\MD2.cs">
+      <Link>Engine\MD2.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Formats\Normals.cs">
+      <Link>Engine\Normals.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Graphics.cs">
+      <Link>Engine\Graphics.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Input.cs">
+      <Link>Engine\Input.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Math.cs">
+      <Link>Engine\Math.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\Sound.WM.cs">
+      <Link>Engine\Sound.WM.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\UI.cs">
+      <Link>Engine\UI.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Engine\WM.cs">
+      <Link>Engine\WM.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Game.cs">
+      <Link>Game.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\HUD.cs">
+      <Link>HUD.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Menu.cs">
+      <Link>Menu.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Pickup.cs">
+      <Link>Pickup.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Player.cs">
+      <Link>Player.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Projectile.cs">
+      <Link>Projectile.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\Save.cs">
+      <Link>Save.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\World.cs">
+      <Link>World.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="World.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <Folder Include="Engine\Formats\" />
   </ItemGroup>
   <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
   <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
